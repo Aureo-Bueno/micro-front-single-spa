@@ -21,6 +21,12 @@ registerApplication({
   activeWhen: ["/react-multiples"],
 });
 
+registerApplication({
+  name: "@ab/react-route",
+  app: () => System.import<LifeCycles>("@ab/react-route"),
+  activeWhen: (location) => location.pathname === "/react-route",
+});
+
 start({
   urlRerouteOnly: true,
 });
