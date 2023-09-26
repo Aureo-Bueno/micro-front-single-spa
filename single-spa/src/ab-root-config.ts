@@ -11,11 +11,14 @@ registerApplication({
 
 registerApplication({
   name: "@ab/react-single",
-  app: () =>
-    System.import<LifeCycles>(
-      "@ab/react-single"
-    ),
-  activeWhen:  (location) => location.pathname === "/react-single",
+  app: () => System.import<LifeCycles>("@ab/react-single"),
+  activeWhen: (location) => location.pathname === "/react-single",
+});
+
+registerApplication({
+  name: "@ab/react-multiples",
+  app: () => System.import<LifeCycles>("@ab/react-multiples"),
+  activeWhen: ["/react-multiples"],
 });
 
 start({
