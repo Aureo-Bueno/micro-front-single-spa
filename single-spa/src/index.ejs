@@ -13,7 +13,8 @@
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
         "react": "https://unpkg.com/react@18/umd/react.production.min.js",
-        "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+        "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.production.min.js",
+        "react-router-dom": "https://unpkg.com/react-router-dom@6.16.0/umd/react-router-dom.production.min.js"
       }
     }
   </script>
@@ -23,12 +24,14 @@
   <script type="systemjs-importmap">
     {
       "imports": {
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
         "@ab/root-config": "//localhost:9000/ab-root-config.js",
         "@ab/react-single": "//localhost:8500/ab-react-single.js",
         "@ab/react-multiples": "//localhost:8501/ab-react-multiples.js",
         "@ab/react-parcel": "//localhost:8502/ab-react-parcel.js",
         "@ab/react-route": "//localhost:8503/ab-react-route.js",
         "@ab/react-lazy": "//localhost:8504/ab-react-lazy.js",
+        "@ab/react-header": "//localhost:8700/ab-react-header.js",
         "@ab/utils": "//localhost:8600/ab-utils.js"
       }
     }

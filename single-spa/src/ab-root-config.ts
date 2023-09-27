@@ -2,10 +2,7 @@ import { registerApplication, start, LifeCycles } from "single-spa";
 
 registerApplication({
   name: "@single-spa/welcome",
-  app: () =>
-    System.import<LifeCycles>(
-      "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-    ),
+  app: () => System.import<LifeCycles>("@single-spa/welcome"),
   activeWhen: (location) => location.pathname === "/",
 });
 
@@ -31,6 +28,12 @@ registerApplication({
   name: "@ab/react-route",
   app: () => System.import<LifeCycles>("@ab/react-route"),
   activeWhen: (location) => location.pathname === "/react-route",
+});
+
+registerApplication({
+  name: "@ab/react-header",
+  app: () => System.import<LifeCycles>("@ab/react-header"),
+  activeWhen: ["/"],
 });
 
 start({

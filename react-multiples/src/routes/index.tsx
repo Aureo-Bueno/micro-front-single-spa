@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { About } from "../pages/About";
@@ -8,9 +8,9 @@ export function AppRoutes() {
   return (
     <BrowserRouter basename="react-multiples">
       <Routes>
-        <Route index path="/" element={Home} />
-        <Route path="/about" element={About} />
-        <Route path="/contact" element={Contact} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
