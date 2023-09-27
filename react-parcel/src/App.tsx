@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
-
-interface ITask {
-  id: number;
-  describe: string;
-}
+import { ITask } from "./@types";
+import { listenEvent } from "@ab/utils";
 
 export function App({ name }) {
   const [task, setTask] = useState<Array<ITask>>([]);
 
   useEffect(() => {
-    window.addEventListener(
+    listenEvent(
       "@ab/react-route/todo/add-task",
       (event: CustomEvent) => {
         setTask((oldTask) => [...oldTask, event.detail]);
       }
     );
   }, []);
+
   return (
     <>
       <h1>{name}</h1>
